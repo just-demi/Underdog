@@ -1,0 +1,105 @@
+@media all and (min-width: 480px) {
+  .Signin {
+    padding: 60px 0;
+  }
+
+  .Signin form {
+    margin: 0 auto;
+    max-width: 320px;
+  }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+.head {
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  font-weight: bold;
+  font-size: 55px;
+}
+
+.bod{
+  font-family: 'Poppins';
+  color: grey;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.aboutusbod{
+  font-family: 'Poppins';
+  color: orangered;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.aboutuslink{
+  font-family: 'Poppins';
+  color: grey;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.aboutusbod2{
+  font-family: 'Poppins';
+  color: grey;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+
+.fbod{
+  font-family: 'Poppins';
+  color: white;
+  font-size: 24px;
+}
+
+.colbod{
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.col{
+  float: left;
+}
+
+.left{
+  width:75%
+}
+
+.right{
+  width:25%
+}
+
+
+
+  #work {
+  margin: 10px 0 0 0;
+  padding: 7px 10px;
+  border: 1px solid #efffff;
+  border-radius: 3px;
+  background-color: orangered;
+  width: 100%;
+  font-size: 15px;
+  color: white;
+  display: block;
+}
+
+#work:disabled{
+  background-color: gray;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
