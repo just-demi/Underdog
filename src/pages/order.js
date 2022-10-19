@@ -1,6 +1,6 @@
 import React from "react";
 import {Container} from 'react-bootstrap'
-import cement from '../components/card/cement.jpg';
+import cement from '../components/misc_imgs/romance.png';
 import Cartcard from "../components/card/cart card";
 import { useCart } from "react-use-cart";
 import Button from 'react-bootstrap/Button';

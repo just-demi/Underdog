@@ -5,13 +5,12 @@ export default function ShopBy(props){
 
 
     return(
-        <div style={{borderRadius: 50, position: 'relative', left: 10, top: 45}}>
+        <div style={{borderRadius: 50, position: 'relative', left: 10, top: 45, width:'25rem', backgroundColor:'white',color:'black'}}>
 
-            <ListGroup style={{ width:'25rem',}} className="fw-bold" horizontal>
-                    <ListGroupItem style={{backgroundColor:props.bg,color:props.txt, width:'2000px'}}>{"Shop By:"}</ListGroupItem>
-                    <ListGroupItem action href="/sbp" style={{backgroundColor:props.bg,color:props.txt}}>{"Product"}</ListGroupItem>
-                    <ListGroupItem style={{backgroundColor:props.bg,color:props.txt}}>{"Supplier"}</ListGroupItem>
-                    <ListGroupItem style={{backgroundColor:props.bg,color:props.txt}}>{"Location"}</ListGroupItem>
+            <ListGroup style={{ width:'25rem',}} className="fw-bold" >
+                    <ListGroupItem style={{backgroundColor:'white',color:'black'}}>{"Shop By:"}</ListGroupItem>
+                    <ListGroupItem action href="/shop-by-genre" >{"Genre"}</ListGroupItem>
+                    <ListGroupItem >{"Author"}</ListGroupItem>
             </ListGroup>
         </div>
     )

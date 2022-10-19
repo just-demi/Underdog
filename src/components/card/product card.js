@@ -1,6 +1,6 @@
 import {ListGroup, Card, ListGroupItem} from 'react-bootstrap';
 //import Button from 'react-bootstrap/Button';
-import cement from './cement.jpg';
+import cement from '../misc_imgs/fantasybooks.png';
 import React, { useState } from "react";
 import { useCart } from "react-use-cart";
 
@@ -48,13 +48,6 @@ function updateQuantity3(hold, amount){
     }
     }
 
-var minus_button = <button onClick={() => updateQuantity(props.product.id,1)} >
-  -
-</button>
-
-var plus_button = <button onClick={() => updateQuantity2(props.product.id,1)} >
-  +
-</button>
     
 //setQuantity(getQuantity(props.product.id));
 
@@ -70,20 +63,9 @@ var plus_button = <button onClick={() => updateQuantity2(props.product.id,1)} >
             <Card.Text>
             {"Unit Price: " + formatMoney(props.product.price)}
             </Card.Text>
-            <Card.Text>
-            {"Quantity:" + getQuantity(props.product.id)}
-            <input
-                type="number"
-                value={getQuantity(props.product.id)}
-                onChange={(e) => updateQuantity3(props.product.id, e.target.value)}
-            />
-            </Card.Text>
             </Card.Body>
 
-            <ListGroup className="list-group-flush">
-                <ListGroupItem>{"Quantity:" + getQuantity(props.product.id)} </ListGroupItem>
-                <ListGroupItem>{minus_button}{plus_button}</ListGroupItem>
-            </ListGroup>
+           
 
             <Card.Body>
             <button style={{borderRadius: 15,backgroundColor: "orangered", color:"white"}} onClick={() => addItem(props.product)} > 

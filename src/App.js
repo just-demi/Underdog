@@ -6,9 +6,7 @@ import Home from './pages';
 import About from './pages/aboutus';
 import SignUp from './pages/signup';
 import SignIn from './pages/login';
-import BAC from "./pages/become a customer";
-import BAS from "./pages/become a supplier";
-import SBP from "./pages/shop by product";
+import SBP from "./pages/shop by genre";
 import SearchBar from "./components/searchbar";
 import Product_page from "./pages/products page";
 import Order_page from "./pages/order";
@@ -30,10 +28,7 @@ function App() {
         <Route path="/aboutus" element={<About/>} />
         <Route path="/signin" element={<SignIn/>} />
         <Route path="/signup" element={<SignUp/>} />
-        <Route path="/shop-by-product" element={<SBP/>} />
-        <Route path="/bac" element={<BAC/>} />
-        <Route path="/bas" element={<BAS/>} />
-        <Route path="/sbp" element={<SBP/>} />
+        <Route path="/shop-by-genre" element={<SBP/>} />
         <Route path="/product_page" element={<Product_page/>} />
         <Route path="/order_page" element={<Order_page/>} />
         <Route path="/checkout" element={<Checkout/>} />

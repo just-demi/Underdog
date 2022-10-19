@@ -18,7 +18,7 @@ const Navbar = () => {
         <>
            <Nav>
             <NavLogo to="/">
-            <img src={Logo} height={110} width={110} left={-30} />
+            <img src={Logo} height={110} alt={""} width={110} left={-30} />
             </NavLogo>
             <Bars />
 
@@ -26,23 +26,18 @@ const Navbar = () => {
                 <NavLink to="/" activeStyle>
                    
                 </NavLink>
-                <NavLink to="/bac" activeStyle>
-                    Become a customer
-                </NavLink>
-                <NavLink to="/bas" activeStyle>
-                    Become a supplier
-                </NavLink>
+               
                 <NavLink to="/aboutus" activeStyle>
                     About us
                 </NavLink>
                 <NavLink to="/contact_us" activeStyle>
                     Contact us
                 </NavLink>
-                <NavLink to="/signin" activeStyle>
-                    Log-in
+                <NavLink to="/order_page" activeStyle>
+                    Order
                 </NavLink>
                 <NavBtn >
-                    <NavBtnLink  to="/order_page">Order now</NavBtnLink>                
+                    <NavBtnLink  to="/signin">Log in</NavBtnLink>                
                 </NavBtn>
             </NavMenu> 
            </Nav> 

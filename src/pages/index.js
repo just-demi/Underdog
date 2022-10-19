@@ -29,11 +29,11 @@ const Home = () => {
   return (  
     <div>
     <div style={{backgroundColor: "black"}}>
-    <ShopBy bg="orangered" txt="white"/>
+    <ShopBy />
     <Container>
     <div style={{textAlign: "right"}}>
     <Link to="/track_order">
-    <img style={{height:90, width:80}}  src={track}/><br/>
+    <img style={{height:90, width:80}} alt={''} src={track}/><br/>
     </Link>
     </div>
     </Container>
@@ -60,7 +60,7 @@ const Home = () => {
      
 
       <Link to='/aboutus'>
-        <Button size="lg" style={{fontWeight:'bold',borderColor: 'orangered', background: 'orangered', color:'white',}} renderAs="button">
+        <Button size="lg" style={{fontWeight:'bold',borderColor: '#379069', background: '#379069', color:'white',}} renderAs="button">
             Learn More
         </Button>
       </Link>
@@ -70,83 +70,40 @@ const Home = () => {
       <Row>
         <Col>
           <text className="colbod">
-            Compare and order from a range of suppliers in your area all at a click of button. 
-            Make all your bulk purchases for your cement, 
-            ready-mix concrete and aggregate materials.
+            This website is a passion project for something I love, reading.
+            It was intially going to be a website for buying and selling textbooks but I think it can be more.
+            I'd like to use it to practice my skills.
           </text>
         </Col>
 
         <Col>
           <text className="colbod">
-            Saving you time and money, and improving your project cash flows. 
-            We believe in empowering and supporting contractors and suppliers in South Africa’s 
-            challenging construction industry.
+            Since it is a fun project, no one will actually buy books off of it.
+            But I want to add a magazine section, hopefully I will end up doing this and not just 
+            giving up on this.
           </text>
         </Col>
       </Row>
     </Container>
     <br/><br/><br/>
-
-      <Container>
-      <Row>
-        
-          <Col >
-            <h2 style={{color:'orangered'}}>Convenience</h2>
-            <text className="colbod">Coefficiency creates a construction marketplace, 
-            enabling the sourcing of materials from a centralized location.</text>
-          </Col>
-
-          <Col>
-            <h2 style={{color:'orangered'}}>Efficiency </h2>
-            <text className="colbod">We reduce the number of intermediaries in the value chain and therefore reduce labor, 
-            storage and transportation costs.</text>
-          </Col>
-
-          <Col>
-            <h2 style={{color:'orangered'}}>Savings</h2>
-            <text className="colbod">Savings from consolidating contractor orders and eliminating intermediaries 
-              are passed onto the contractors.
-            </text>
-          </Col>
-        </Row>
-      </Container>
-    <br/><br/>
+   
 
 
-    <Container>
-    <h1 class="text-center" style={{color:"orangered"}}>We take pride in our numbers and adding value</h1>
-    <br/>
-      <div style={{color: "white"}}>
-        <div className="column" >
-          <h1 class="text-center" >6</h1>
-          <h4 class="text-center" >Suppliers</h4>
-        </div>
-        <div className="column" >
-        <div className="centered">
-          <h1 class="text-center">20</h1>
-          </div>
-          <h4 class="text-center" >Customers</h4>
-        </div>
-        <div className="column">
-          <h1 class="text-center" >{formatMoney(250000)}</h1>
-          <h4 class="text-center" >Credit Granted to Date</h4>
-        </div>
-      </div><br/><br/>
-  </Container>
+
   <br/><br/><br/><br/>
 
     </div>
     <br/><br/>
    
 
-    <h1 class="text-center" style={{color:"orangered"}}> Testimonials</h1> 
+    <h1 class="text-center" style={{color:"#379069"}}> Testimonials</h1> 
 
     <div style={{backgroundColor: "white", color:"white"}} >
     <Testimonials />
     </div>
     <br/><br/>
 
-    <h1 class="text-center" style={{color:"orangered"}}> Partners</h1> 
+    <h1 class="text-center" style={{color:"#379069"}}> Partners</h1> 
     <LogoS/>
     <br/><br/>
     <br/><br/>

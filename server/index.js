@@ -6,7 +6,6 @@ const app = express();
 const router = express.Router();
 const User = require('./models/User');
 const Bcrypt = require("bcryptjs");
-var nodemailer = require("nodemailer");
 
 
 const cors = require("cors");
@@ -20,33 +19,8 @@ app.use(bodyParser.json());
 
 //var url = config.baseUrl + "verify?id=" + token_mail_verification;
 
- const sendEmail = async (email, subject, text) => {
-  try {
-    const transporter = nodemailer.createTransport({
-      host: "smtp.gmail.com",
-      service: "gmail",
-      port: 587,
-      secure: true,
-      auth: {
-        user: "coefficiency.developer@gmail.com",
-        pass: "c0EfficieNcy/2020",
-      },
-    });
 
-    await transporter.sendMail({
-      from: "coefficiency.developer@gmail.com",
-      to: email,
-      subject: subject,
-      text: text,
-    });
-    console.log("email sent sucessfully");
-  } catch (error) {
-    console.log("email not sent");
-    console.log(error);
-  }
-};
-
-var rand,mailOptions,host,link
+var host
 
 const mongoose = require('mongoose');
 const DB = require('./config').MONGODB;
