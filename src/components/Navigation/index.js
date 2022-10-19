@@ -1,5 +1,5 @@
 import React from "react";
-import {Container,} from 'react-bootstrap'
+
 
 import {
     Nav,
@@ -27,14 +27,14 @@ const Navbar = () => {
                    
                 </NavLink>
                
-                <NavLink to="/aboutus" activeStyle>
-                    About us
+                <NavLink to="/signup" activeStyle>
+                    Register
                 </NavLink>
-                <NavLink to="/contact_us" activeStyle>
-                    Contact us
+                <NavLink to="/order_history" activeStyle>
+                    Orders
                 </NavLink>
                 <NavLink to="/order_page" activeStyle>
-                    Order
+                    My account
                 </NavLink>
                 <NavBtn >
                     <NavBtnLink  to="/signin">Log in</NavBtnLink>                

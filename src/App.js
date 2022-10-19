@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-pascal-case */
 import React from "react";
 import './App.css';
 import Navbar from "./components/Navigation";
@@ -7,9 +8,9 @@ import About from './pages/aboutus';
 import SignUp from './pages/signup';
 import SignIn from './pages/login';
 import SBP from "./pages/shop by genre";
-import SearchBar from "./components/searchbar";
+//import SearchBar from "./components/searchbar";
 import Product_page from "./pages/products page";
-import Order_page from "./pages/order";
+import Cart from "./pages/cart";
 import Checkout from "./pages/checkout";
 import Contact from "./pages/contact us";
 import TrackOrder from "./pages/track order";
@@ -30,7 +31,7 @@ function App() {
         <Route path="/signup" element={<SignUp/>} />
         <Route path="/shop-by-genre" element={<SBP/>} />
         <Route path="/product_page" element={<Product_page/>} />
-        <Route path="/order_page" element={<Order_page/>} />
+        <Route path="/cart" element={<Cart/>} />
         <Route path="/checkout" element={<Checkout/>} />
         <Route path="/contact_us" element={<Contact/>}/>
         <Route path="/track_order" element={<TrackOrder/>}/>

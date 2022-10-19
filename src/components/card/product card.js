@@ -1,4 +1,5 @@
-import {ListGroup, Card, ListGroupItem} from 'react-bootstrap';
+/* eslint-disable no-unused-vars */
+import {Card} from 'react-bootstrap';
 //import Button from 'react-bootstrap/Button';
 import cement from '../misc_imgs/fantasybooks.png';
 import React, { useState } from "react";
@@ -10,7 +11,7 @@ function formatMoney(n) {
 
 
 export default function Productcard(props){
-  const [quantity, setQuantity] = useState("");
+  //const [quantity, setQuantity] = useState("");
     
 
   const { addItem,updateItemQuantity,item,removeItem,getItem,inCart } = useCart();

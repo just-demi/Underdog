@@ -70,7 +70,7 @@ const formStyle = {
     width: '280px',
   	display: 'block'
 };
-const submitStyle = {
+/*const submitStyle = {
     margin: '10px 0 0 0',
     padding: '7px 10px',
     border: '1px solid #efffff',
@@ -81,7 +81,7 @@ const submitStyle = {
     color: 'white',
     display: 'block',
     
-};
+};*/
 const inputStyle = {
     margin: '5px 0 10px 0',
     padding: '5px', 

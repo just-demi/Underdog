@@ -9,15 +9,11 @@ export default function SignUp() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [verifypassword, setVerifypassword] = useState("");
-  const [CIPC, setCIPC] = useState("");
-	//const [BEcertificate, setBEcertificate] = useState(null);
-	//const [BankStatement, setBankStatement] = useState(null);
-	const [companyName, setcompanyName] = useState("");
   
   const navigate = useNavigate();
 
   function validateForm() {
-    return (email.length > 0) && (password.length > 0) && (verifypassword.length > 0) && (CIPC.length > 0) && (companyName.length > 0);
+    return (email.length > 0) && (password.length > 0) && (verifypassword.length > 0) ;
   }
 
   function validatePassword() {
@@ -26,7 +22,7 @@ export default function SignUp() {
 
   function handleSubmit(event) {
     event.preventDefault();
-    const obj = {email: email, password: password, CIPC: CIPC, companyName: companyName, userType: 'customer'};
+    const obj = {email: email, password: password, userType: 'customer'};
     console.log(JSON.stringify(obj));
 
     axios.post('http://localhost:3001/register', obj)
@@ -76,29 +72,8 @@ export default function SignUp() {
             value={verifypassword}
             onChange={(e) => setVerifypassword(e.target.value)}
           />
-          </Form.Group>
-          
-      <Form.Group size="lg" controlId="number">
-          <Form.Label style={labelStyle}>CIPC:</Form.Label>
-          <Form.Control
-            style={inputStyle}
-            placeholder="Enter your company registration no"
-            type="text"
-            value={CIPC}
-            onChange={(e) => setCIPC(e.target.value)}
-          />
-        </Form.Group>
-
         
-      <Form.Group size="lg" controlId="text">
-          <Form.Label style={labelStyle}>Company Name:</Form.Label>
-          <Form.Control
-            style={inputStyle}
-            placeholder="Enter your company name"
-            type="text"
-            value={companyName}
-            onChange={(e) => setcompanyName(e.target.value)}
-          />
+      
         </Form.Group>
 
 

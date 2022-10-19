@@ -13,10 +13,10 @@ function formatMoney(n) {
 const Checkout = () => {
 
     const { items,cartTotal } = useCart();
-    var cart_items = null;
+    /*var cart_items = null;
     var cart_quantity = null;
     var cart_prices = null;
-    var total = null;
+    var total = null;*/
     var test = null;
     var delivery = null;
 
@@ -72,7 +72,7 @@ if(items.length>0){
     </div>
 
 
-    cart_items = <div>{items.map(prod => (
+    /*cart_items = <div>{items.map(prod => (
         <div key={prod.id} className="basket-product">
           <h6>{prod.name}</h6> 
         </div>
@@ -108,7 +108,7 @@ if(items.length>0){
         <h6>{formatMoney(prod.quantity*prod.price)} </h6>
         </div>
     ))}
-    </div>
+    </div>*/
 }
 else{
     test = <div>

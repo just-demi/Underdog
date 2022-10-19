@@ -10,17 +10,15 @@ import { Link } from 'react-router-dom';
 import './Signin.css';
 
 
-function formatMoney(n) {
-  return "R" + (Math.round(n * 100) / 100).toLocaleString();
-}
+
 
 const Home = () => {
   
-  const styleObj = {
+  /*const styleObj = {
     fontSize: 18,
     fontWeight: "bold",
     color: "white",
-  }
+  }*/
 
  
 
@@ -53,7 +51,7 @@ const Home = () => {
   </div>
   
     
-    {<img style={{height:310, width:417.5}}  src={test}/>}
+    {<img style={{height:310, width:417.5}} alt={''} src={test}/>}
   <br/><br/><br/><br/>
     </div>
 

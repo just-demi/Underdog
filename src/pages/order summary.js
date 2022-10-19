@@ -1,23 +1,25 @@
 import React from "react";
-import {Container,} from 'react-bootstrap';
 import ShopBy from "../components/shop by";
 
 
 
 const OrderSummary = () => {
     return (
-        <div>
-        <br/><br/>
+        <div style={{backgroundColor:"#f5f5f5"}}>
+        
+            <div style={{backgroundColor: "black"}}>
+                <ShopBy />
+                <br/><br/>
+            </div>
 
-        <div style={{backgroundColor: "orangered", height:"25vh"}}>
-        <ShopBy/>
-        </div>
-        <br/><br/><br/><br/>
+            <h1 class="text-center" style={{color: "#379069"}}>Orders</h1>
+            
+        <br/><br/><br/>
         </div>
     );
 };
 
-const formStyle = {
+/*const formStyle = {
     margin: 'auto',
     padding: '10px',
     border: '1px solid #c9c9c9',
@@ -26,6 +28,6 @@ const formStyle = {
     width: '280px',
   	display: 'block',
     color: 'black',
-};
+};*/
 
 export default OrderSummary;

@@ -18,7 +18,7 @@ export default class Testimonials extends Component {
         autoPlay={true}
         interval={6100}>
         <div>
-          <img src={cement}></img>
+          <img src={cement} alt={''}></img>
           <div className="myCarousel">
             <h3>John Smith</h3>
             <h4>Constructor</h4>
@@ -30,7 +30,7 @@ export default class Testimonials extends Component {
         
 
         <div>
-          <img src={bricks}/>
+          <img src={bricks} alt={''}/>
           <div className="myCarousel">
             <h3>Sibusiso Dlamini</h3>
             <h4>Supplier</h4>
@@ -42,7 +42,7 @@ export default class Testimonials extends Component {
         </div>
 
         <div>
-          <img src={sr}/>
+          <img src={sr} alt={''}/>
           <div className="myCarousel">
             <h3>Nadia Naidoo</h3>
             <h4>Customer</h4>

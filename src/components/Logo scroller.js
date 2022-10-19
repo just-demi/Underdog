@@ -17,16 +17,16 @@ export default class LogoS extends Component {
         autoPlay={true}
         interval={6100}>
         <div>
-          <img src={cement}></img>
+          <img src={cement} alt={''}></img>
         </div>
         
 
         <div>
-          <img src={bricks}/>
+          <img src={bricks} alt={''}/>
         </div>
 
         <div>
-          <img src={sr}/>
+          <img src={sr} alt={''}/>
         </div>
       </Carousel>
     );

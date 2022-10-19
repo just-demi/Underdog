@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import Card from 'react-bootstrap/Card';
 import cement from './cement.jpg';
 import { useCart } from "react-use-cart";
