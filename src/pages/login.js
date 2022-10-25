@@ -10,6 +10,7 @@ import { useNavigate } from 'react-router-dom';
 export default function SignIn() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [user, setUser] = useState()
   
   const navigate = useNavigate();
 
@@ -23,7 +24,11 @@ export default function SignIn() {
     console.log(JSON.stringify(obj));
 
     axios.post('http://localhost:3001/login', obj)
-            .then(res => {console.log("it works" + res.status+res);
+            .then(res => {console.log("it works" + res.status+"test"+res.data.name);
+            // set the state of the user
+            setUser(res.data)
+            // store the user in localStorage
+            localStorage.setItem('user', res.data)
             navigate('/')}
             )
             .catch(err => {

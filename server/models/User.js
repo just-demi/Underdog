@@ -2,15 +2,10 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema
 
 const UserSchema = new Schema({
-    companyName: { 
-        type: String,
-        required: true, 
-    },
-    CIPC: { 
+    name: { 
         type: String, 
         required: true,
-        unique: true, 
-        index: true,
+        trim: true,
     },
     email: {
         type: String,
@@ -28,15 +23,9 @@ const UserSchema = new Schema({
         enum : ['customer','supplier','admin'],
         default: 'customer'
     },
-    beeCertificate: {
-        type: String,
-    },
     createdAt: { 
         type: Date, 
         default: Date.now, 
-    },
-    address: {
-        type: String,
     }
 });
 

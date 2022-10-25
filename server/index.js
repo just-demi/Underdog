@@ -56,8 +56,7 @@ app.post('/register',async (req,res) => {
                 }
                 else{
                 const newUser = new User({
-                    companyName: req.body.companyName,
-                    CIPC: req.body.CIPC,
+                    name: req.body.name,
                     email: req.body.email,
                     password: req.body.password,
                     userType: req.body.userType,
@@ -92,12 +91,12 @@ app.post('/login', (req,res) => {
             if (!isMatch){
                 res.status(400).json({success: false, error: "Wrong password"})
             } else{
-                    const token = JsonWebToken.sign({id: user._id, email: user.email}, SECRET_JWT_CODE,
+                    const token = JsonWebToken.sign({id: user._id, email: user.email, name: user.name}, SECRET_JWT_CODE,
                         {
                             expiresIn: 3600
                           }
                           )
-                    res.status(200).json({success: true, token: token, })
+                    res.status(200).send({success: true, token: token, name:user.name,})
                 }
             }
     })

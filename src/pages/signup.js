@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router-dom';
 
 export default function SignUp() {
   const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
   const [password, setPassword] = useState("");
   const [verifypassword, setVerifypassword] = useState("");
   
@@ -22,7 +23,7 @@ export default function SignUp() {
 
   function handleSubmit(event) {
     event.preventDefault();
-    const obj = {email: email, password: password, userType: 'customer'};
+    const obj = {email: email, password: password, name:name, userType: 'customer'};
     console.log(JSON.stringify(obj));
 
     axios.post('http://localhost:3001/register', obj)
@@ -42,13 +43,24 @@ export default function SignUp() {
 
 
         <Form.Group size="lg" controlId="email">
-          <Form.Label style={labelStyle}>Username:</Form.Label>
+          <Form.Label style={labelStyle}>Email:</Form.Label>
           <Form.Control
             style={inputStyle}
             placeholder="Enter your Email"
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+          />
+        </Form.Group>
+        
+        <Form.Group size="lg" controlId="text">
+          <Form.Label style={labelStyle}>Name:</Form.Label>
+          <Form.Control
+            style={inputStyle}
+            placeholder="Enter your name"
+            type="text"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
           />
         </Form.Group>
 
@@ -99,7 +111,7 @@ const formStyle = {
     padding: '7px 10px',
     border: '1px solid #efffff',
     borderRadius: '3px',
-    background: 'orangered',
+    background: '#379069',
     width: '100%', 
     fontSize: '15px',
     color: 'white',
