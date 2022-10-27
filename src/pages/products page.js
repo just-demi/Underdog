@@ -30,10 +30,10 @@ const Product_page = () => {
     const products = [
         {
           id: "1",
-          name: "A grade cement",
+          name: "The lighting Thief",
           price: 80,
           quantity: 1,
-          supplier: "some supplier"
+          author: "Rick Roiden"
         },
         {
           id: "2",
@@ -80,9 +80,9 @@ const Product_page = () => {
 
     return (
         
-        <div style={{color: "black",backgroundColor: "#fafafa"}}/*style={{backgroundColor: "#f9f9f9"}}*/>
+        <div style={{color: "black",backgroundColor: "#f3f3f3"}}/*style={{backgroundColor: "#f9f9f9"}}*/>
         <br/><br/>
-        <h1 class="text-center" style={{color: "orangered"}}>Choose your preferred product</h1>
+        <h1 class="text-center" style={{color: "#379069"}}>Choose your preferred product</h1>
         
 
         <Container>

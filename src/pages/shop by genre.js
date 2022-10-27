@@ -20,9 +20,9 @@ var imgs = [Fantasy,Action,Romance,ya]
 
 
     return (
-        <div style={{backgroundColor: "#fafafa"}}>
+        <div style={{backgroundColor: "#f3f3f3"}}>
         <br/><br/>
-        <h1 class="text-center" style={{color: "orangered"}}>Choose from a wide range of materials <br/> for your project needs</h1>
+        <h1 class="text-center" style={{color: "#379069"}}>Choose a genre to get started</h1>
         <Container>
         <Row>
        <Col><Cards name={Titles[0]} des={Description[0]} img={imgs[0]} link={"/product_page"}/></Col>

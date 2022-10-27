@@ -26,10 +26,8 @@ return (
 		</Column>
 		<Column>
 			<Heading>Services</Heading>
-			<FooterLink href="#">Credit</FooterLink>
+			<FooterLink href="#">Library</FooterLink>
 			<FooterLink href="#">Partnerships</FooterLink>
-			<FooterLink href="#">Selling</FooterLink>
-			<FooterLink href="#">Buying</FooterLink>
 		</Column>
 		<Column>
 			<Heading>Contact Us</Heading>

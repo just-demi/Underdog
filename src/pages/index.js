@@ -4,7 +4,6 @@ import LogoS from '../components/Logo scroller';
 import ShopBy from '../components/shop by';
 import Testimonials from '../components/Testimonials';
 import test from '../components/misc_imgs/books.png';
-import track from '../components/misc_imgs/tracktext.png';
 import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
 import './Signin.css';
@@ -28,13 +27,6 @@ const Home = () => {
     <div>
     <div style={{backgroundColor: "black"}}>
     <ShopBy />
-    <Container>
-    <div style={{textAlign: "right"}}>
-    <Link to="/track_order">
-    <img style={{height:90, width:80}} alt={''} src={track}/><br/>
-    </Link>
-    </div>
-    </Container>
     <br/>
     <Container style={{ color: "white"}}>
 
@@ -52,7 +44,6 @@ const Home = () => {
   
     
     {<img style={{height:310, width:417.5}} alt={''} src={test}/>}
-  <br/><br/><br/><br/>
     </div>
 
      
@@ -83,12 +74,7 @@ const Home = () => {
         </Col>
       </Row>
     </Container>
-    <br/><br/><br/>
-   
-
-
-
-  <br/><br/><br/><br/>
+    <br/><br/>
 
     </div>
     <br/><br/>

@@ -9,7 +9,7 @@ export default function Cards(props){
 
     return(
         <>
-        <Card border="secondary" style={{ width: '18rem', backgroundColor: "white" }}>
+        <Card style={{ width: '18rem', backgroundColor: "white" }}>
         <Card.Img style={{height: '12rem', width:'18rem'}} variant="top" src={props.img} alt={props.name}/>
         <Card.Body>
             <Card.Title>{props.name}</Card.Title>
@@ -17,7 +17,7 @@ export default function Cards(props){
             {props.des}
             </Card.Text>
             <Link to="/product_page">
-                <Button style={{background: 'orangered', border: '1px solid #efffff',}}  renderAs="button">
+                <Button style={{background: '#379069', border: '1px solid #efffff',}}  renderAs="button">
                     <span>Order Now</span>
                 </Button>
             </Link>

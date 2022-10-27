@@ -14,9 +14,9 @@ export default function Productcard(props){
   //const [quantity, setQuantity] = useState("");
     
 
-  const { addItem,updateItemQuantity,item,removeItem,getItem,inCart } = useCart();
+  const { addItem } = useCart();
 
-  function getQuantity(hold){
+  /*function getQuantity(hold){
     if(inCart(hold)){
         return getItem(hold).quantity
     }
@@ -31,45 +31,33 @@ function updateQuantity(hold, amount){
     else{
 
     }
-}
+}*/
 
-function updateQuantity2(hold, amount){
-    if(inCart(hold)){
-        updateItemQuantity(hold, getItem(hold).quantity + amount)}
-    else{
 
-    }
-    }
 
-function updateQuantity3(hold, amount){
-    if(inCart(hold)){
-        updateItemQuantity(hold, amount)}
-    else{
-        alert("Please first add to cart before updating the Quantity")
-    }
-    }
+
 
     
 //setQuantity(getQuantity(props.product.id));
 
     return(
         <>
-        <Card border="secondary" style={{ width: '18rem', backgroundColor: "white" }}>
-        <Card.Img style={{height: '12rem', width:'18rem'}} variant="top" src={cement} alt={props.product.name}/>
+        <Card style={{ width: '18rem', backgroundColor: "white" }}>
+        <Card.Img className="rounded mx-auto d-block" style={{height: '12rem', width:'12rem'}} variant="top" src={cement} alt={props.product.name}/>
         <Card.Body>
             <Card.Title>{props.product.name}</Card.Title>
             <Card.Text>
-            {"Product Description:" }
+            {"by " + props.product.author}
             </Card.Text>
             <Card.Text>
-            {"Unit Price: " + formatMoney(props.product.price)}
+            <h5>{formatMoney(props.product.price)}</h5>
             </Card.Text>
             </Card.Body>
 
            
 
             <Card.Body>
-            <button style={{borderRadius: 15,backgroundColor: "orangered", color:"white"}} onClick={() => addItem(props.product)} > 
+            <button style={{borderRadius: 5,backgroundColor: "#379069", color:"white", borderColor:"#379069"}} onClick={() => addItem(props.product)} > 
             Add to cart</button>
 
         </Card.Body>
