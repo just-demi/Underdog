@@ -4,11 +4,11 @@ import styled from "styled-components";
 
 export const Nav = styled.nav`
     background: white;
-    height: 75px;
+    height: 70px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.2rem calc((100vw - 1000px) / 2);
+    padding: 1rem calc((100vw - 1000px) / 2);
     z-index: 12;
 `;
 export const NavLogo = styled(Link)`
@@ -17,7 +17,6 @@ export const NavLogo = styled(Link)`
   font-size: 2rem;
   text-decoration: none;
   margin-left: -120px;
-
 `;
 
 
@@ -39,7 +38,19 @@ font-weight: bold;
 }
 `;
 
-export const Bars = styled(FaBars)`
+export const NavText = styled.div`
+color: grey;
+display: flex;
+align-items: center;
+text-decoration: none;
+padding: 0 1rem;
+font-size: 20px;
+height: 100%;
+font-weight: bold;
+
+`;
+
+export const Bars = styled.div`
   display: none;
   color: #fff;
   @media screen and (max-width: 768px) {

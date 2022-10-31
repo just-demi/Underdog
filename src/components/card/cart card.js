@@ -13,15 +13,17 @@ export default function Cartcard(props){
 
     return(
         <>
-        <Card border="secondary" style={{ width: '55rem', backgroundColor: "white" }}  className="text-center">
-        <Card.Img class="col-auto" style={{height: '12rem', width:'18rem', left: 0}} src={cement} alt={props.product.name}/>
-        <Card.Body className="col">
+        <Card style={{ width: '43rem', backgroundColor: "white" }}  className="text-center">
+            <span>
+        <Card.Img style={{height: '12rem', width:'12rem', left:'-10px'}} className="col"  src={cement} alt={props.product.name}/>
+        <Card.Body className="col-center">
             <Card.Title>{props.product.name}</Card.Title>
             <Card.Text>
             {"Price: " +formatMoney(props.product.price)}
             </Card.Text>
-          <button style={{borderRadius: 15,backgroundColor: "orangered", color:"white"}} onClick={() => removeItem(props.product.id)}>Remove from cart</button>
+          <button style={{border: '1px solid #379069', borderRadius:5,backgroundColor: "#379069", color:"white"}} onClick={() => removeItem(props.product.id)}>Remove from cart</button>
         </Card.Body>
+        </span>
         </Card>
 
         </>

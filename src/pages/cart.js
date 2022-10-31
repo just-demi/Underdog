@@ -1,16 +1,20 @@
 import React from "react";
-import {Container} from 'react-bootstrap'
+import {Container, Row} from 'react-bootstrap'
 import cement from '../components/misc_imgs/romance.png';
 import Cartcard from "../components/card/cart card";
 import { useCart } from "react-use-cart";
 import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
 import ShopBy from "../components/shop by";
+import "./Signin.css";
 
+function formatMoney(n) {
+    return "R" + (Math.round(n * 100) / 100).toLocaleString(undefined, { maximumFractionDigits: 2, minimumFractionDigits: 2 });
+}
 
 const Order_page = () => {
 
-const { items} = useCart();
+const { items,cartTotal } = useCart();
 
 var cart_items = null
 
@@ -31,31 +35,112 @@ else{
 
 
     return (
+        
         <body>
-        <div style={{ backgroundColor: "#fafafa"}}>
+        <div style={{ backgroundColor: "#f1f1f1"}}>
 
-        <div style={{backgroundColor: "orangered", height:"30vh"}}>
+        <div style={{backgroundColor: "#379069", height:"30vh"}}>
         <ShopBy bg="white" txt="orangered"/> <br/><br/>
         <div style={{display: 'flex',  justifyContent:'center', alignItems:'center'}}>
             <h2 style={{color:"white", fontWeight:"bold"}}>Please Confirm items in your Order</h2>
         </div>
         </div>
 
-        <h1 class="text-center" style={{color: "orangered"}}>Order</h1>
-        <Container>
-       {cart_items}
+        <h1 class="text-center" style={{color: "#379069"}}>Shopping Cart</h1>
+        
        
-       <Link to="/checkout">
-                <Button style={{background: 'orangered', border: '1px solid #efffff',}}  renderAs="button">
-                    <span>Go to Checkout</span>
+       
+       
+       
+       <Container>
+        <div className='row'>
+            <div className='col left'>
+
+            <Container >
+            {cart_items}
+            </Container> <br/><br/>
+
+            <div class="text-center">
+            <Link to="/order_page">
+                    <Button style={{background: '#379069', border: '1px solid #efffff',}}  renderAs="button">
+                    <span>Back to Shopping</span>
                 </Button>
-        </Link>
-       </Container>
-       <br/><br/><br/><br/>
+            </Link>
+
+                <Button style={{background: '#379069', border: '1px solid #efffff',}}  renderAs="button">
+                    <span>Clear Cart</span>
+                </Button>
+            </div>
+
+        </div>
+
+        <div className="col right">
+            <Container style={formStyle2}>
+
+            <h2>{"Cart Summary"}</h2>
+            
+                <Row>
+                    <div className="col left">
+                    {"Total cost (VAT excl.): " } <br/>
+                    <b>{"Total (VAT incl.):"}</b>
+                    </div>
+                    <div className="col right">
+                    {formatMoney(cartTotal)} <br/>
+                    <b>{formatMoney(234)}</b>
+                    </div>
+                </Row>
+            <br/><br/>
+            
+            <h2>{"Make Payments"}</h2>
+                    <Link to="/track_order">
+                        <Button style={{background: '#379069', border: '1px solid #efffff',}}  renderAs="button">
+                        <span>Pay with Credit/Cheque Card</span>
+                    </Button>
+                </Link>
+
+                <br/>
+
+                <Link to="/track_order">
+                    <Button style={{background: '#379069', border: '1px solid #efffff',}}  renderAs="button">
+                        <span>Pay by EFT</span>
+                    </Button>
+                </Link>
+
+                <br/>
+
+                <Link to="/track_order">
+                    <Button style={{background: '#379069', border: '1px solid #efffff',}}  renderAs="button">
+                        <span>Apply for Credit</span>
+                    </Button>
+                </Link>
+
+            </Container>
+        </div>
+
+
+            </div>
+            </Container>
+            <br/><br/><br/>
+
        
+
+
         </div>
         </body>
     );
+};
+
+
+
+const formStyle2 = {
+    margin: '10px',
+    padding: '10px',
+    border: '1px solid #c9c9c9',
+    borderRadius: '5px',
+    background: 'white',
+    width: '350px',
+  	display: 'block',
+    color: 'black',
 };
 
 export default Order_page;

@@ -28,7 +28,8 @@ export default function SignIn() {
             // set the state of the user
             setUser(res.data)
             // store the user in localStorage
-            localStorage.setItem('user', res.data)
+            localStorage.setItem('user', res.data.name)
+            console.log("it works" + localStorage.getItem('user')+"test"+res.data.name)
             navigate('/')}
             )
             .catch(err => {
