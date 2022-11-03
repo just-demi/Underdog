@@ -13,89 +13,54 @@ const MyAccount = () => {
             <Container>
                 <br/><br/>
                 <h1 style={{color: "#379069"}}>My account</h1>
-                    <Link to="/order_history">
-                        <Button style={{background:"#379069" , border: '1px solid #efffff',}} renderAs="button">
-                            <span>View Order History</span>
-                        </Button>
-                    </Link>
                 <br/><br/>
+
             <div className="container">
                 <div className='row'>
 
                     <div className='col'>
                         <Container style={formStyle2}>
-                            <h4>{"Orders"}</h4>
-            
+                            <h4>{"Orders"}</h4>            
                                 <Row>
-                                    <div className="col left">
-                                        {"Total cost (VAT excl.): " } <br/>
-                                        <b>{"Total (VAT incl.):"}</b>
-                                    </div>
-                                    <div className="col right">
-                                        {formatMoney(35762)} <br/>
-                                        <b>{formatMoney(234)}</b>
-                                    </div>
+                                    <Link to="/order_history">orders</Link>
+                                </Row>            
+                                <Row>
+                                    <Link to="#">invoices</Link>
+                                </Row>            
+                                <Row>
+                                    <Link to="#">returns</Link>
+                                </Row>            
+                                <Row>
+                                    <Link to="#">product reviews</Link>
                                 </Row>
-
-                                <br/><br/>
-
-                                <Link to="/track_order">
-                                    <Button style={{background: '#379069', border: '1px solid #efffff',}}  renderAs="button">
-                                        <span>Pay by EFT</span>
-                                    </Button>
-                                </Link>
-
+                            <br/><br/>
                         </Container>
                     </div>
 
                     <div className='col'>
                         <Container style={formStyle2}>
                             <h4>{"Payments & Credit"}</h4>
-            
                                 <Row>
-                                    <div className="col left">
-                                        {"Total cost (VAT excl.): " } <br/>
-                                        <b>{"Total (VAT incl.):"}</b>
-                                    </div>
-                                    <div className="col right">
-                                        {formatMoney(35762)} <br/>
-                                        <b>{formatMoney(234)}</b>
-                                    </div>
-                                </Row>
-
+                                        <Link to="#">Credrits and Refunds</Link>
+                                    </Row>            
+                                    <Row>
+                                        <Link to="#">Redeem Gift Vouchers</Link>
+                                    </Row>   
                                 <br/><br/>
-
-                                <Link to="/track_order">
-                                    <Button style={{background: '#379069', border: '1px solid #efffff',}}  renderAs="button">
-                                        <span>Pay by Cash</span>
-                                    </Button>
-                                </Link>
 
                         </Container>
                     </div>
                     
                     <div className="col">
                         <Container style={formStyle2}>
-
                             <h4>{"Customer Information"}</h4>
                                 <Row>
-                                    <div className="col left">
-                                        {"Total cost (VAT excl.): " } <br/>
-                                        <b>{"Total (VAT incl.):"}</b>
-                                    </div>
-                                    <div className="col right">
-                                        {formatMoney(35762)} <br/>
-                                        <b>{formatMoney(234)}</b>
-                                    </div>
-                                </Row>
-
-                                <br/><br/>
-                    
-                                <Link to="/track_order">
-                                    <Button style={{background: '#379069', border: '1px solid #efffff',}}  renderAs="button">
-                                    <span>Pay with Credit/Cheque Card</span>
-                                    </Button>
-                                </Link>
+                                        <Link to="#">Personal Details</Link>
+                                    </Row>            
+                                    <Row>
+                                        <Link to="#">Address</Link>
+                                    </Row>
+                            <br/><br/>
                         </Container>
                     </div>
 
@@ -106,23 +71,12 @@ const MyAccount = () => {
 
                             <h4>{"My Lists"}</h4>
                                 <Row>
-                                    <div className="col left">
-                                        {"Total cost (VAT excl.): " } <br/>
-                                        <b>{"Total (VAT incl.):"}</b>
-                                    </div>
-                                    <div className="col right">
-                                        {formatMoney(35762)} <br/>
-                                        <b>{formatMoney(234)}</b>
-                                    </div>
-                                </Row>
-
-                                <br/><br/>
-                    
-                                <Link to="/track_order">
-                                    <Button style={{background: '#379069', border: '1px solid #efffff',}}  renderAs="button">
-                                    <span>Pay with Cheque</span>
-                                    </Button>
-                                </Link>
+                                        <Link to="#">My Lists</Link>
+                                    </Row>            
+                                    <Row>
+                                        <Link to="#">Create a List</Link>
+                                    </Row>
+                            <br/><br/>
                         </Container>
                     </div>
                 </div>
@@ -144,7 +98,8 @@ const formStyle2 = {
     border: '1px solid #c9c9c9',
     borderRadius: '5px',
     background: 'white',
-    width: '350px',
+    width: '22rem',
   	display: 'block',
     color: 'black',
+    height: '10rem'
 };
