@@ -82,7 +82,7 @@ const Product_page = () => {
         
         <div style={{color: "black",backgroundColor: "#f3f3f3"}}/*style={{backgroundColor: "#f9f9f9"}}*/>
         <br/><br/>
-        <h1 class="text-center" style={{color: "#379069"}}>Choose your preferred product</h1>
+        <h1 class="text-center" style={{color: "#379069"}}>Choose your preferred genre</h1>
         
 
         <Container>

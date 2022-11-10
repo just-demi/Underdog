@@ -3,9 +3,9 @@ import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import {Container,Row} from 'react-bootstrap';
 
-function formatMoney(n) {
+/*function formatMoney(n) {
     return "R" + (Math.round(n * 100) / 100).toLocaleString(undefined, { maximumFractionDigits: 2, minimumFractionDigits: 2 });
-}
+}*/
 
 const MyAccount = () => {
     return (

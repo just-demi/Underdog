@@ -39,12 +39,12 @@ else{
         <body>
         <div style={{ backgroundColor: "#f1f1f1"}}>
 
-        <div style={{backgroundColor: "#379069", height:"30vh"}}>
-        <ShopBy bg="white" txt="orangered"/> <br/><br/>
-        <div style={{display: 'flex',  justifyContent:'center', alignItems:'center'}}>
-            <h2 style={{color:"white", fontWeight:"bold"}}>Please Confirm items in your Order</h2>
-        </div>
-        </div>
+            <div style={{backgroundColor: "#379069", height:"30vh"}}>
+                <ShopBy bg="white" txt="orangered"/> <br/><br/>
+                    <div style={{display: 'flex',  justifyContent:'center', alignItems:'center'}}>
+                        <h2 style={{color:"white", fontWeight:"bold"}}>Please Confirm items in your Order</h2>
+                    </div>
+            </div>
 
         <h1 class="text-center" style={{color: "#379069"}}>Shopping Cart</h1>
         

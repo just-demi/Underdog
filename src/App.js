@@ -9,6 +9,7 @@ import SignUp from './pages/signup';
 import SignIn from './pages/login';
 import SBP from "./pages/shop by genre";
 import MyAccount from "./pages/My account";
+import ProductDetail from "./pages/product detail";
 //import SearchBar from "./components/searchbar";
 import Product_page from "./pages/products page";
 import Cart from "./pages/cart";
@@ -36,6 +37,7 @@ function App() {
         <Route path="/track_order" element={<TrackOrder/>}/>
         <Route path="/order_history" element={<OrderSummary/>}/>
         <Route path="/myaccount" element={<MyAccount/>}/>
+        <Route path="/productdetail" element={<ProductDetail/>}/>
       </Routes>
       <Footer/>
     </Router>
