@@ -42,7 +42,7 @@ function updateQuantity(hold, amount){
 
     return(
         <>
-        <Card style={{ width: '18rem', backgroundColor: "white" }}>
+        <Card style={{ width: '18rem', backgroundColor: "white", margin:'1rem' }}>
         <Card.Img className="rounded mx-auto d-block" style={{height: '12rem', width:'12rem'}} variant="top" src={cement} alt={props.product.name}/>
         <Card.Body>
             <Card.Title>{props.product.name}</Card.Title>

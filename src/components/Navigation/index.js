@@ -24,7 +24,7 @@ const token = localStorage.getItem("token")
 let navbar_elements = <>
 <Nav>
  <NavLogo to="/">
- <img src={Logo} height={110} alt={""} width={110} left={-30} />
+ <img src={Logo} height={110} alt={""} width={110} left={-20} />
  </NavLogo>
 
  <NavMenu>
@@ -41,6 +41,9 @@ let navbar_elements = <>
      <NavLink to="/myaccount" activeStyle>
          My account
      </NavLink>
+    <NavText activeStyle>
+        Blog
+    </NavText>
      <NavBtn >
          <NavBtnLink  to="/signin">Log in</NavBtnLink>                
      </NavBtn>
@@ -65,7 +68,7 @@ const Navbar = () => {
             navbar_elements = <>
             <Nav>
              <NavLogo to="/">
-             <img src={Logo} height={110} alt={""} width={110} left={-30} />
+             <img src={Logo} height={110} alt={""} width={110} left={-20} />
              </NavLogo>
             
              <NavMenu>
@@ -86,6 +89,9 @@ const Navbar = () => {
                  <NavLink to="/myaccount" activeStyle>
                      My account
                  </NavLink>
+                 <NavText activeStyle>
+                     Blog
+                 </NavText>
                  <NavBtn >
                      <NavBtnLink  to="/signin">Log in</NavBtnLink>                
                  </NavBtn>

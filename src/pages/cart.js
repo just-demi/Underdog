@@ -33,6 +33,8 @@ else{
     </div>
 }
 
+let total = cartTotal + (cartTotal*0.15);
+
 
     return (
         
@@ -86,7 +88,7 @@ else{
                     </div>
                     <div className="col right">
                     {formatMoney(cartTotal)} <br/>
-                    <b>{formatMoney(234)}</b>
+                    <b>{formatMoney(total)}</b>
                     </div>
                 </Row>
             <br/><br/>

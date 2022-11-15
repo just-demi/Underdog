@@ -40,35 +40,49 @@ const Product_page = () => {
           name: "B grade bricks",
           price: 10,
           quantity: 1,
-          supplier: "some other supplier"
+          author: "some other supplier"
         },
         {
           id: "3",
           name: "A grade sand",
           price: 500,
           quantity: 1,
-          supplier: "some new supplier"
+          author: "some new supplier"
         },
         {
           id: "4",
           name: "A grade stones",
           price: 500,
           quantity: 1,
-          supplier: "some old supplier"
+          author: "some old supplier"
         },
         {
           id: "5",
           name: "Low strength cement",
           price: 70,
           quantity: 1,
-          supplier: "some recent supplier"
+          author: "some recent supplier"
         },
         {
           id: "6",
           name: "Medium strength cement",
           price: 75,
           quantity: 1,
-          supplier: "some far supplier"
+          author: "some far supplier"
+        },
+        {
+          id: "7",
+          name: "Titans Curse",
+          price: 250,
+          quantity: 1,
+          author: "Rick Roiden"
+        },
+        {
+          id: "8",
+          name: "City of Bones",
+          price: 75,
+          quantity: 1,
+          author: "Cassandra Clare"
         },
       ];
 //var imgs = [cement,bricks,sr,mix]
@@ -80,13 +94,14 @@ const Product_page = () => {
 
     return (
         
-        <div style={{color: "black",backgroundColor: "#f3f3f3"}}/*style={{backgroundColor: "#f9f9f9"}}*/>
+        /*<div style={{color: "black",backgroundColor: "#f3f3f3"}}>
         <br/><br/>
         <h1 class="text-center" style={{color: "#379069"}}>Choose your preferred genre</h1>
         
 
         <Container>
           <Row>
+            
             <Col><Productcard product={products[0]} /></Col>
             <Col><Productcard product={products[1]} /></Col>
             <Col><Productcard product={products[2]}/></Col>
@@ -99,10 +114,24 @@ const Product_page = () => {
           </Row>
         </Container>
         <div>
-          <h1>{ /*items.length*/ }</h1>
+          <h1>{ /*items.length}</h1>
         </div>
         <br/><br/><br/>
-        </div>
+        </div>*/
+
+        <div className='row-wrapper' style={{color: "black",backgroundColor: "#f3f3f3"}}>
+          
+          <Container>
+            <Row>
+              {products.map(product => (
+                <Productcard key={product.id} product={product}/>
+                
+              ))}  
+            </Row>
+        </Container>
+      <br/><br/><br/>
+      </div>
+
         
     );
 };

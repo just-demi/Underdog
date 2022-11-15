@@ -8,10 +8,10 @@ export default function ShopBy(props){
 
     return(
         <Container>
-            <div style={{position: 'relative', top: 10, width:'25rem', backgroundColor:'white',color:'black'}}>
+            <div style={{position: 'relative', top: 10, width:'12rem', backgroundColor:'white',color:'black'}}>
 
-                <ListGroup horizontal variant="flush" className="fw-bold" >
-                        <ListGroup.Item style={{width:'15rem'}} >{<b>"Shop By:"</b>}</ListGroup.Item>
+                <ListGroup variant="flush" className="fw-bold" >
+                        <ListGroup.Item >{<b>Shop By:</b>}</ListGroup.Item>
                         <ListGroup.Item action href='/product_page'>{"Genre"}</ListGroup.Item>
                         <ListGroup.Item action href='#'>{"Author"}</ListGroup.Item>
                 </ListGroup>

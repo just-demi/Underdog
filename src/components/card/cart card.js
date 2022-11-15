@@ -21,6 +21,9 @@ export default function Cartcard(props){
             <Card.Text>
             {"Price: " +formatMoney(props.product.price)}
             </Card.Text>
+            <Card.Text>
+            {"Quantity in cart: " + props.product.quantity}
+            </Card.Text>
           <button style={{border: '1px solid #379069', borderRadius:5,backgroundColor: "#379069", color:"white"}} onClick={() => removeItem(props.product.id)}>Remove from cart</button>
         </Card.Body>
         </span>
