@@ -9,8 +9,8 @@ export default function Cards(props){
 
     return(
         <>
-        <Card style={{ width: '18rem', backgroundColor: "white" }}>
-        <Card.Img style={{height: '12rem', width:'18rem'}} variant="top" src={props.img} alt={props.name}/>
+        <Card style={{ width: '18rem', backgroundColor: "white", margin:'1rem'}}>
+        <Card.Img style={{height: '12rem', }} variant="top" src={props.img} alt={props.name}/>
         <Card.Body>
             <Card.Title>{props.name}</Card.Title>
             <Card.Text>

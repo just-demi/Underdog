@@ -1,9 +1,5 @@
 import React from "react";
-import {Container, Row, Col} from 'react-bootstrap'
-/*import cement from '../components/card/cement.jpg';
-import bricks from '../components/card/bandb.jpg';
-import sr from '../components/card/gravel-stone-soil-sand.jpg';
-import mix from '../components/card/readymix.jpg';*/
+import {Container, Row} from 'react-bootstrap'
 import Productcard from "../components/card/product card";
 //import { useCart } from "react-use-cart";
 //import {ListGroup, Card, ListGroupItem} from 'react-bootstrap';
@@ -93,31 +89,7 @@ const Product_page = () => {
 
 
     return (
-        
-        /*<div style={{color: "black",backgroundColor: "#f3f3f3"}}>
-        <br/><br/>
-        <h1 class="text-center" style={{color: "#379069"}}>Choose your preferred genre</h1>
-        
 
-        <Container>
-          <Row>
-            
-            <Col><Productcard product={products[0]} /></Col>
-            <Col><Productcard product={products[1]} /></Col>
-            <Col><Productcard product={products[2]}/></Col>
-          </Row>
-          <br/>
-          <Row>
-            <Col><Productcard product={products[3]}/></Col>
-            <Col><Productcard product={products[4]} /></Col>
-            <Col><Productcard product={products[5]} /></Col>
-          </Row>
-        </Container>
-        <div>
-          <h1>{ /*items.length}</h1>
-        </div>
-        <br/><br/><br/>
-        </div>*/
 
         <div className='row-wrapper' style={{color: "black",backgroundColor: "#f3f3f3"}}>
           
