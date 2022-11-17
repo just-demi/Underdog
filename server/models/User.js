@@ -29,4 +29,45 @@ const UserSchema = new Schema({
     }
 });
 
-module.exports = Users = mongoose.model("User", UserSchema);
+const BookSchema = new Schema({
+    name: { 
+        type: String, 
+        required: true,
+        trim: true,
+    },
+    author: {
+        type: String,
+        required: true,
+        //unique: true,
+        //lowercase: true,
+        trim: true,
+    },
+    price: {
+        type: Number,
+        required : true,
+    },
+    quantity: {
+        type: Number,
+        required : true,
+    },
+    ISBN: {
+        type: Number,
+        required: true,
+        unique: true,
+    },
+    supplier: {
+        type: String,
+        trim: true,
+    },
+    createdAt: { 
+        type: Date, 
+        default: Date.now, 
+    }
+});
+
+const User = mongoose.model("User", UserSchema);
+const Book = mongoose.model("Book", BookSchema);
+
+module.exports = {
+    User, Book
+}

@@ -4,7 +4,7 @@ const express = require("express");
 const JsonWebToken = require("jsonwebtoken");
 const app = express();
 const router = express.Router();
-const User = require('./models/User');
+const {User, Book} = require('./models/User');
 const Bcrypt = require("bcryptjs");
 
 
@@ -20,7 +20,7 @@ app.use(bodyParser.json());
 //var url = config.baseUrl + "verify?id=" + token_mail_verification;
 
 
-var host
+let host;
 
 const mongoose = require('mongoose');
 const DB = require('./config').MONGODB;
@@ -50,7 +50,7 @@ app.post('/register',async (req,res) => {
         if(user){
             return res.status(400).json({msg:"A user has the username"})
         }else{
-            User.findOne({CIPC: req.body.CIPC}).then(async (no)=>{
+            User.findOne({email: req.body.email}).then(async (no)=>{
                 if(no){
                     return res.status(400).json({msg:"The Company number exists"})
                 }
@@ -105,20 +105,40 @@ app.post('/login', (req,res) => {
     })
 })
 
+app.post('/send_books', (req,res) => {
+    const book = new Book({
+        name: req.body.name,
+        author: req.body.author,
+        price: req.body.price,
+        quantity: req.body.quantity,
+        ISBN: req.body.ISBN,
+        supplier: req.body.supplier,
+      });
+
+      book.save().then(async newUser => {
+        res.status(200).send({msg: 'books added successfully'});
+    })
+    .catch(err => {
+        res.status(400).send({msg: err.message});
+    });
+})
+
+app.get('/get_products', (req,res) => {
+    host=req.get('host');
+    console.log(host);
+    res.send(host)
+})
+
 app.get('/', (req,res) => {
 
     res.send('Hello World!');
 
 })
 
-app.get('/test', (req,res) => {
-    host=req.get('host');
-    console.log(host);
-    res.send(host)
-})
+
 
 app.get('/verify', function(req, res) {
-    token = req.query.id;
+    let token = req.query.id;
     if (token) {
         try {
             JsonWebToken.verify(token, SECRET_JWT_CODE, (e, decoded) => {
