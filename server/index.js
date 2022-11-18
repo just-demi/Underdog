@@ -115,7 +115,7 @@ app.post('/send_books', (req,res) => {
         supplier: req.body.supplier,
       });
 
-      book.save().then(async newUser => {
+      book.save().then(async book => {
         res.status(200).send({msg: 'books added successfully'});
     })
     .catch(err => {
