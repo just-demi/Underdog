@@ -1,27 +1,25 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {Container, Row} from 'react-bootstrap'
 import Productcard from "../components/card/product card";
+import axios from 'axios';
 //import { useCart } from "react-use-cart";
 //import {ListGroup, Card, ListGroupItem} from 'react-bootstrap';
 
 
-
 const Product_page = () => {
-    /*const {
-        /*isEmpty,
-        totalUniqueItems,
-        items,
-        updateItemQuantity,
-        removeItem,
-        emptyCart,
-        inCart,
-        addItem,
-        getItem,
-        updateItem,
-      } = useCart();*/
+    
+      const [books, setBooks] = useState([]);
       //const { addItem } = useCart();
      
-
+      useEffect(() => {
+        axios.get('http://localhost:3001/get_books').then(
+          res => {
+            const hold = res.data.results;
+            console.log(hold[0].name)
+            setBooks(hold);
+          }
+  )
+      }, []);
  
     const products = [
         {
@@ -81,13 +79,8 @@ const Product_page = () => {
           author: "Cassandra Clare"
         },
       ];
-//var imgs = [cement,bricks,sr,mix]
 
-
-
-
-
-
+      console.log(books);
     return (
 
 
@@ -95,7 +88,7 @@ const Product_page = () => {
           
           <Container>
             <Row>
-              {products.map(product => (
+              {books.map(product => (
                 <Productcard key={product.id} product={product}/>
                 
               ))}  

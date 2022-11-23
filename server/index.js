@@ -123,10 +123,14 @@ app.post('/send_books', (req,res) => {
     });
 })
 
-app.get('/get_products', (req,res) => {
-    host=req.get('host');
-    console.log(host);
-    res.send(host)
+app.get('/get_books', (req,res) => {
+    Book.find({}, function(err, result) {
+        if (err) {
+          console.log(err);
+        } else {
+          res.send({results: result});
+        }
+      });
 })
 
 app.get('/', (req,res) => {
