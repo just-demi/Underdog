@@ -65,9 +65,32 @@ const BookSchema = new Schema({
     }
 });
 
+const AuthorSchema = new Schema({
+    name: { 
+        type: String, 
+        required: true,
+        trim: true,
+    },
+    email: {
+        type: String,
+        unique: true,
+        lowercase: true,
+        trim: true,
+    },
+    bio: {
+        type: String,
+        trim: true,
+    },
+    createdAt: { 
+        type: Date, 
+        default: Date.now, 
+    }
+});
+
 const User = mongoose.model("User", UserSchema);
 const Book = mongoose.model("Book", BookSchema);
+const Author = mongoose.model("Author", BookSchema);
 
 module.exports = {
-    User, Book
+    User, Book, Author
 }

@@ -16,30 +16,6 @@ export default function Productcard(props){
 
   const { addItem } = useCart();
 
-  /*function getQuantity(hold){
-    if(inCart(hold)){
-        return getItem(hold).quantity
-    }
-    else{
-        return 0
-    }
-}
-
-function updateQuantity(hold, amount){
-    if(inCart(hold)){
-        updateItemQuantity(hold, getItem(hold).quantity - amount)}
-    else{
-
-    }
-}*/
-
-
-
-
-
-    
-//setQuantity(getQuantity(props.product.id));
-
     return(
         <>
         <Card style={{ width: '18rem', backgroundColor: "white", margin:'1rem' }}>
@@ -66,4 +42,24 @@ function updateQuantity(hold, amount){
         </>
     )
 
+  /*function getQuantity(hold){
+    if(inCart(hold)){
+        return getItem(hold).quantity
+    }
+    else{
+        return 0
+    }
+}
+
+function updateQuantity(hold, amount){
+    if(inCart(hold)){
+        updateItemQuantity(hold, getItem(hold).quantity - amount)}
+    else{
+
+    }
+}*/
+
+
+    
+//setQuantity(getQuantity(props.product.id));
 }

@@ -63,7 +63,7 @@ let total = cartTotal + (cartTotal*0.15);
             </Container> <br/><br/>
 
             <div class="text-center">
-            <Link to="/order_page">
+            <Link to="/product_page">
                     <Button style={{background: '#379069', border: '1px solid #efffff',}}  renderAs="button">
                     <span>Back to Shopping</span>
                 </Button>

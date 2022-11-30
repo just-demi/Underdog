@@ -14,15 +14,20 @@ const Product_page = () => {
       useEffect(() => {
         axios.get('http://localhost:3001/get_books').then(
           res => {
+            //console.log(JSON.parse(res))
             const hold = res.data.results;
-            console.log(hold[0].name)
+            hold.forEach(function (element) {
+              element.id = element._id;
+            });
+            console.log(hold)
             setBooks(hold);
           }
   )
       }, []);
- 
 
-      console.log(books);
+
+      //console.log(books);
+
     return (
 
 
@@ -32,7 +37,6 @@ const Product_page = () => {
             <Row>
               {books.map(product => (
                 <Productcard key={product.id} product={product}/>
-                
               ))}  
             </Row>
         </Container>

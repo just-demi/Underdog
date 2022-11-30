@@ -41,9 +41,12 @@ let navbar_elements = <>
      <NavLink to="/myaccount" activeStyle>
          My account
      </NavLink>
-    <NavText activeStyle>
-        Blog
-    </NavText>
+     <NavText activeStyle>
+         Blog
+     </NavText>
+     <NavLink to="/cart" activeStyle>
+         Cart
+    </NavLink>
      <NavBtn >
          <NavBtnLink  to="/signin">Log in</NavBtnLink>                
      </NavBtn>
@@ -92,6 +95,9 @@ const Navbar = () => {
                  <NavText activeStyle>
                      Blog
                  </NavText>
+                 <NavLink to="/cart" activeStyle>
+                     Cart
+                 </NavLink>
                  <NavBtn >
                      <NavBtnLink  to="/signin">Log in</NavBtnLink>                
                  </NavBtn>
