@@ -23,7 +23,7 @@ export default class Testimonials extends Component {
             <h3>John Smith</h3>
             <h4>Constructor</h4>
             <p>
-                The website is a great and reduces the time I spent ordering mateBooksrials.
+                The website is a great and reduces the time I spent ordering Books.
             </p>
           </div>
         </div>

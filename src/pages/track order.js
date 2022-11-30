@@ -6,9 +6,9 @@ const TrackOrder = () => {
     return (
         <div>
         <br/><br/>
-        <h1 class="text-center" style={{color: "orangered"}}>Track your orders on this page</h1>
+        <h1 class="text-center" style={{color: "#379069"}}>Track your orders on this page</h1>
             <Link to="/order_history">
-                <Button style={{background:"orangered" , border: '1px solid #efffff',}} renderAs="button">
+                <Button style={{background:"#379069" , border: '1px solid #efffff',}} renderAs="button">
                     <span>View Order History</span>
                 </Button>
             </Link>
