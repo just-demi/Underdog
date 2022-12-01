@@ -4,7 +4,7 @@ const express = require("express");
 const JsonWebToken = require("jsonwebtoken");
 const app = express();
 const router = express.Router();
-const {User, Book} = require('./models/User');
+const {User, Book, Author} = require('./models/User');
 const Bcrypt = require("bcryptjs");
 
 
@@ -125,6 +125,31 @@ app.post('/send_books', (req,res) => {
 
 app.get('/get_books', (req,res) => {
     Book.find({}, function(err, result) {
+        if (err) {
+          console.log(err);
+        } else {
+          res.send({results: result});
+        }
+      });
+})
+
+app.post('/send_author', (req,res) => {
+    const author = new Author({
+        name: req.body.name,
+        website: req.body.website,
+        bio: req.body.bio
+      });
+
+      author.save().then(async author => {
+        res.status(200).send({msg: 'Author added successfully'});
+    })
+    .catch(err => {
+        res.status(400).send({msg: err.message});
+    });
+})
+
+app.get('/get_authors', (req,res) => {
+    Author.find({}, function(err, result) {
         if (err) {
           console.log(err);
         } else {
