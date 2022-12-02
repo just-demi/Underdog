@@ -1,40 +1,28 @@
-import React from "react";
-import Cards from "../components/card/card";
+import React, { useEffect, useState } from "react";
+import AuthorCards from "../components/card/Author card";
 import {Container, Row} from 'react-bootstrap'
-import Fantasy from '../components/misc_imgs/fantasybooks.png';
-import Action from '../components/misc_imgs/action.jpg';
-import Romance from '../components/misc_imgs/romance.png';
-import ya from '../components/misc_imgs/ya.jpg';
-
-
+import axios from 'axios';
+import rick from '../components/misc_imgs/rick.jpg';
+import clare from '../components/misc_imgs/Clare.jpg'
 
 const SBA = () => {
 
-const hold = [
-    {
-      id: "1",
-      name: "Fantasy",
-      Description:'',
-      imgs: [Fantasy]
-    },
-    {
-        id: "2",
-        name: "Action",
-        Description:'',
-        imgs: [Action]
-    },
-    {
-      id: "3",
-      name: "Romance",
-      Description:'',
-      imgs: [Romance]
-    },
-    {
-      id: "4",
-      name: "ya",
-      Description:'',
-      imgs: [ya]
-    }]
+  const [author, setAuthor] = useState([]);
+ 
+  useEffect(() => {
+    axios.get('http://localhost:3001/get_authors').then(
+      res => {
+        const hold = res.data.results;
+        hold.forEach(function (element) {
+          element.id = element._id;
+        });
+        hold[0].imgs = clare;
+        hold[1].imgs = rick;
+        console.log(hold.name)
+        setAuthor(hold);
+      }
+)
+  }, []);
 
 
 
@@ -42,12 +30,12 @@ const hold = [
     return (
         <div className='row-wrapper' style={{color: "black",backgroundColor: "#f3f3f3"}}>
         <br/><br/>
-        <h1 class="text-center" style={{color: "#379069"}}>Choose a genre to get started</h1>
+        <h1 class="text-center" style={{color: "#379069"}}>Select your preferred Author</h1>
           
           <Container>
             <Row>
-              {hold.map(product => (
-                <Cards key={product.id} name={product.name} img={product.imgs}/>
+              {author.map(product => (
+                <AuthorCards key={product.id} name={product.name} bio={product.bio} link={product.website} img={product.imgs}/>
               ))}  
             </Row>
         </Container>

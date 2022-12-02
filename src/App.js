@@ -8,6 +8,7 @@ import About from './pages/aboutus';
 import SignUp from './pages/signup';
 import SignIn from './pages/login';
 import SBP from "./pages/shop by genre";
+import SBA from "./pages/shop by author";
 import MyAccount from "./pages/My account";
 import ProductDetail from "./pages/product detail";
 //import SearchBar from "./components/searchbar";
@@ -31,6 +32,7 @@ function App() {
         <Route path="/signin" element={<SignIn/>} />
         <Route path="/signup" element={<SignUp/>} />
         <Route path="/shop-by-genre" element={<SBP/>} />
+        <Route path="/shop-by-author" element={<SBA/>} />
         <Route path="/product_page" element={<Product_page/>} />
         <Route path="/cart" element={<Cart/>} />
         <Route path="/contact_us" element={<Contact/>}/>

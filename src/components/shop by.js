@@ -13,7 +13,7 @@ export default function ShopBy(props){
                 <ListGroup variant="flush" className="fw-bold" >
                         <ListGroup.Item >{<b>Shop By:</b>}</ListGroup.Item>
                         <ListGroup.Item action href='/shop-by-genre'>{"Genre"}</ListGroup.Item>
-                        <ListGroup.Item action href='#'>{"Author"}</ListGroup.Item>
+                        <ListGroup.Item action href='/shop-by-author'>{"Author"}</ListGroup.Item>
                 </ListGroup>
             </div>
         </Container>
