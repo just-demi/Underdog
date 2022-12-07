@@ -41,7 +41,7 @@ let total = cartTotal + (cartTotal*0.15);
         <body>
         <div style={{ backgroundColor: "#f1f1f1"}}>
 
-            <div style={{backgroundColor: "#379069", height:"30vh"}}>
+            <div style={{backgroundColor: "#379069"}}>
                 <ShopBy bg="white" txt="orangered"/> <br/><br/>
                     <div style={{display: 'flex',  justifyContent:'center', alignItems:'center'}}>
                         <h2 style={{color:"white", fontWeight:"bold"}}>Please Confirm items in your Order</h2>
